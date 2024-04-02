@@ -1,0 +1,1 @@
+constraint assign_shifts array gm,sunday,a,3,4.

@@ -1,0 +1,340 @@
+enum docs = {RG,GM,DB,CC,MC,SD,ML,HL,DL,JL,RM,GN,EW,LB,DH,SK,BL,BLEE,RP,AR,LS,AV,LC,KM,BB,JD,CK,TB};
+
+%RG
+
+constraint global_cardinality_low_up(     ssu[RG,..],[1],[0],[4]);
+constraint global_cardinality_low_up(incharge[RG,..],[1],[0],[4]);
+constraint global_cardinality_low_up(  oncall[RG,..],[1],[0],[0]);
+constraint no_consecutive(RG);
+constraint no_split_weekend(RG);
+constraint assign_shifts(RG,friday,pm,0,0);
+constraint assign_shifts(RG,saturday,am,3,4);
+constraint assign_shifts(RG,saturday,pm,0,0);
+constraint assign_shifts(RG,saturday,am,0,0);
+constraint assign_shifts(RG,saturday,pm,0,0);
+
+%GM
+
+constraint global_cardinality_low_up(     ssu[GM,..],[1],[0],[4]);
+constraint global_cardinality_low_up(incharge[GM,..],[1],[0],[0]);
+constraint global_cardinality_low_up(  oncall[GM,..],[1],[0],[0]);
+constraint no_consecutive(GM);
+constraint no_split_weekend(GM);
+constraint assign_shifts(GM,friday,pm,0,0);
+constraint assign_shifts(GM,saturday,am,0,0);
+constraint assign_shifts(GM,saturday,pm,0,0);
+constraint assign_shifts(GM,saturday,am,0,0);
+constraint assign_shifts(GM,saturday,pm,0,0);
+
+%DB
+
+constraint global_cardinality_low_up(     ssu[DB,..],[1],[0],[2]);
+constraint global_cardinality_low_up(incharge[DB,..],[1],[0],[6]);
+constraint global_cardinality_low_up(  oncall[DB,..],[1],[0],[6]);
+constraint no_consecutive(DB);
+constraint no_split_weekend(DB);
+constraint assign_shifts(DB,friday,pm,2,2);
+constraint assign_shifts(DB,saturday,am,1,1);
+constraint assign_shifts(DB,saturday,pm,1,1);
+constraint assign_shifts(DB,saturday,am,1,1);
+constraint assign_shifts(DB,saturday,pm,1,1);
+
+%CC
+
+constraint global_cardinality_low_up(     ssu[CC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[CC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[CC,..],[1],[0],[6]);
+constraint no_consecutive(CC);
+constraint no_split_weekend(CC);
+constraint assign_shifts(CC,friday,pm,2,2);
+constraint assign_shifts(CC,saturday,am,1,1);
+constraint assign_shifts(CC,saturday,pm,1,1);
+constraint assign_shifts(CC,saturday,am,1,1);
+constraint assign_shifts(CC,saturday,pm,1,1);
+
+%MC
+
+constraint global_cardinality_low_up(     ssu[MC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[MC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[MC,..],[1],[0],[6]);
+constraint no_consecutive(MC);
+constraint assign_shifts(MC,friday,pm,2,2);
+constraint assign_shifts(MC,saturday,am,1,1);
+constraint assign_shifts(MC,saturday,pm,1,1);
+constraint assign_shifts(MC,saturday,am,1,1);
+constraint assign_shifts(MC,saturday,pm,1,1);
+
+%SD
+
+constraint global_cardinality_low_up(     ssu[SD,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[SD,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[SD,..],[1],[0],[6]);
+constraint assign_shifts(SD,friday,pm,0,0);
+constraint assign_shifts(SD,saturday,am,3,4);
+constraint assign_shifts(SD,saturday,pm,0,0);
+constraint assign_shifts(SD,saturday,am,0,0);
+constraint assign_shifts(SD,saturday,pm,0,0);
+
+%ML
+
+constraint global_cardinality_low_up(     ssu[ML,..],[1],[0],[5]);
+constraint global_cardinality_low_up(incharge[ML,..],[1],[0],[5]);
+constraint global_cardinality_low_up(  oncall[ML,..],[1],[0],[8]);
+constraint assign_shifts(ML,friday,pm,0,0);
+constraint assign_shifts(ML,saturday,am,3,4);
+constraint assign_shifts(ML,saturday,pm,0,0);
+constraint assign_shifts(ML,saturday,am,0,0);
+constraint assign_shifts(ML,saturday,pm,0,0);
+
+%HL
+
+constraint global_cardinality_low_up(     ssu[HL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[HL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[HL,..],[1],[0],[6]);
+constraint no_consecutive(HL);
+constraint no_split_weekend(HL);
+constraint assign_shifts(HL,friday,pm,0,0);
+constraint assign_shifts(HL,saturday,am,3,4);
+constraint assign_shifts(HL,saturday,pm,0,0);
+constraint assign_shifts(HL,saturday,am,0,0);
+constraint assign_shifts(HL,saturday,pm,0,0);
+
+%DL
+
+constraint global_cardinality_low_up(     ssu[DL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[DL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[DL,..],[1],[0],[6]);
+constraint no_consecutive(DL);
+constraint no_split_weekend(DL);
+constraint assign_shifts(DL,friday,pm,0,0);
+constraint assign_shifts(DL,saturday,am,3,4);
+constraint assign_shifts(DL,saturday,pm,0,0);
+constraint assign_shifts(DL,saturday,am,0,0);
+constraint assign_shifts(DL,saturday,pm,0,0);
+
+%JL
+
+constraint global_cardinality_low_up(     ssu[JL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[JL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[JL,..],[1],[0],[6]);
+constraint no_consecutive(JL);
+constraint no_split_weekend(JL);
+constraint assign_shifts(JL,friday,pm,0,0);
+constraint assign_shifts(JL,saturday,am,3,4);
+constraint assign_shifts(JL,saturday,pm,0,0);
+constraint assign_shifts(JL,saturday,am,0,0);
+constraint assign_shifts(JL,saturday,pm,0,0);
+
+%RM
+
+constraint global_cardinality_low_up(     ssu[RM,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[RM,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[RM,..],[1],[0],[6]);
+constraint no_consecutive(RM);
+constraint no_split_weekend(RM);
+constraint assign_shifts(RM,friday,pm,0,0);
+constraint assign_shifts(RM,saturday,am,3,4);
+constraint assign_shifts(RM,saturday,pm,0,0);
+constraint assign_shifts(RM,saturday,am,0,0);
+constraint assign_shifts(RM,saturday,pm,0,0);
+
+%GN
+
+constraint global_cardinality_low_up(     ssu[GN,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[GN,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[GN,..],[1],[0],[7]);
+constraint assign_shifts(GN,friday,pm,0,0);
+constraint assign_shifts(GN,saturday,am,3,4);
+constraint assign_shifts(GN,saturday,pm,0,0);
+constraint assign_shifts(GN,saturday,am,0,0);
+constraint assign_shifts(GN,saturday,pm,0,0);
+
+%EW
+
+constraint global_cardinality_low_up(     ssu[EW,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[EW,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[EW,..],[1],[0],[6]);
+constraint no_consecutive(EW);
+constraint no_split_weekend(EW);
+constraint assign_shifts(EW,friday,pm,0,0);
+constraint assign_shifts(EW,saturday,am,3,4);
+constraint assign_shifts(EW,saturday,pm,0,0);
+constraint assign_shifts(EW,saturday,am,0,0);
+constraint assign_shifts(EW,saturday,pm,0,0);
+
+%LB
+
+constraint global_cardinality_low_up(     ssu[LB,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[LB,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[LB,..],[1],[0],[5]);
+constraint no_consecutive(LB);
+constraint no_split_weekend(LB);
+constraint assign_shifts(LB,friday,pm,0,0);
+constraint assign_shifts(LB,saturday,am,3,4);
+constraint assign_shifts(LB,saturday,pm,0,0);
+constraint assign_shifts(LB,saturday,am,0,0);
+constraint assign_shifts(LB,saturday,pm,0,0);
+
+%DH
+
+constraint global_cardinality_low_up(     ssu[DH,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[DH,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[DH,..],[1],[0],[3]);
+constraint no_consecutive(DH);
+constraint assign_shifts(DH,friday,pm,0,0);
+constraint assign_shifts(DH,saturday,am,3,4);
+constraint assign_shifts(DH,saturday,pm,0,0);
+constraint assign_shifts(DH,saturday,am,0,0);
+constraint assign_shifts(DH,saturday,pm,0,0);
+
+%SK
+
+constraint global_cardinality_low_up(     ssu[SK,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[SK,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[SK,..],[1],[0],[6]);
+constraint no_consecutive(SK);
+constraint no_split_weekend(SK);
+constraint assign_shifts(SK,friday,pm,0,0);
+constraint assign_shifts(SK,saturday,am,3,4);
+constraint assign_shifts(SK,saturday,pm,0,0);
+constraint assign_shifts(SK,saturday,am,0,0);
+constraint assign_shifts(SK,saturday,pm,0,0);
+
+%BL
+
+constraint global_cardinality_low_up(     ssu[BL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[BL,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[BL,..],[1],[0],[6]);
+constraint no_consecutive(BL);
+constraint no_split_weekend(BL);
+constraint assign_shifts(BL,friday,pm,0,0);
+constraint assign_shifts(BL,saturday,am,3,4);
+constraint assign_shifts(BL,saturday,pm,0,0);
+constraint assign_shifts(BL,saturday,am,0,0);
+constraint assign_shifts(BL,saturday,pm,0,0);
+
+%BLEE
+
+constraint global_cardinality_low_up(     ssu[BLEE,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[BLEE,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[BLEE,..],[1],[0],[6]);
+constraint no_consecutive(BLEE);
+constraint assign_shifts(BLEE,friday,pm,0,0);
+constraint assign_shifts(BLEE,saturday,am,3,4);
+constraint assign_shifts(BLEE,saturday,pm,0,0);
+constraint assign_shifts(BLEE,saturday,am,0,0);
+constraint assign_shifts(BLEE,saturday,pm,0,0);
+
+%RP
+
+constraint global_cardinality_low_up(     ssu[RP,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[RP,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[RP,..],[1],[0],[6]);
+constraint assign_shifts(RP,friday,pm,0,0);
+constraint assign_shifts(RP,saturday,am,3,4);
+constraint assign_shifts(RP,saturday,pm,0,0);
+constraint assign_shifts(RP,saturday,am,0,0);
+constraint assign_shifts(RP,saturday,pm,0,0);
+
+%AR
+
+constraint global_cardinality_low_up(     ssu[AR,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[AR,..],[1],[0],[3]);
+constraint global_cardinality_low_up(  oncall[AR,..],[1],[0],[0]);
+constraint assign_shifts(AR,friday,pm,0,0);
+constraint assign_shifts(AR,saturday,am,3,4);
+constraint assign_shifts(AR,saturday,pm,0,0);
+constraint assign_shifts(AR,saturday,am,0,0);
+constraint assign_shifts(AR,saturday,pm,0,0);
+
+%LS
+
+constraint global_cardinality_low_up(     ssu[LS,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[LS,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[LS,..],[1],[0],[6]);
+constraint assign_shifts(LS,friday,pm,0,0);
+constraint assign_shifts(LS,saturday,am,3,4);
+constraint assign_shifts(LS,saturday,pm,0,0);
+constraint assign_shifts(LS,saturday,am,0,0);
+constraint assign_shifts(LS,saturday,pm,0,0);
+
+%AV
+
+constraint global_cardinality_low_up(     ssu[AV,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[AV,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[AV,..],[1],[0],[6]);
+constraint no_consecutive(AV);
+constraint assign_shifts(AV,friday,pm,0,0);
+constraint assign_shifts(AV,saturday,am,3,4);
+constraint assign_shifts(AV,saturday,pm,0,0);
+constraint assign_shifts(AV,saturday,am,0,0);
+constraint assign_shifts(AV,saturday,pm,0,0);
+
+%LC
+
+constraint global_cardinality_low_up(     ssu[LC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[LC,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[LC,..],[1],[0],[0]);
+constraint assign_shifts(LC,friday,pm,0,0);
+constraint assign_shifts(LC,saturday,am,3,4);
+constraint assign_shifts(LC,saturday,pm,0,0);
+constraint assign_shifts(LC,saturday,am,0,0);
+constraint assign_shifts(LC,saturday,pm,0,0);
+
+%KM
+
+constraint global_cardinality_low_up(     ssu[KM,..],[1],[0],[5]);
+constraint global_cardinality_low_up(incharge[KM,..],[1],[0],[5]);
+constraint global_cardinality_low_up(  oncall[KM,..],[1],[0],[4]);
+constraint assign_shifts(KM,friday,pm,0,0);
+constraint assign_shifts(KM,saturday,am,3,4);
+constraint assign_shifts(KM,saturday,pm,0,0);
+constraint assign_shifts(KM,saturday,am,0,0);
+constraint assign_shifts(KM,saturday,pm,0,0);
+
+%BB
+
+constraint global_cardinality_low_up(     ssu[BB,..],[1],[0],[0]);
+constraint global_cardinality_low_up(incharge[BB,..],[1],[0],[0]);
+constraint global_cardinality_low_up(  oncall[BB,..],[1],[0],[0]);
+constraint assign_shifts(BB,friday,pm,0,0);
+constraint assign_shifts(BB,saturday,am,3,4);
+constraint assign_shifts(BB,saturday,pm,0,0);
+constraint assign_shifts(BB,saturday,am,0,0);
+constraint assign_shifts(BB,saturday,pm,0,0);
+
+%JD
+
+constraint global_cardinality_low_up(     ssu[JD,..],[1],[0],[0]);
+constraint global_cardinality_low_up(incharge[JD,..],[1],[0],[0]);
+constraint global_cardinality_low_up(  oncall[JD,..],[1],[0],[0]);
+constraint assign_shifts(JD,friday,pm,0,0);
+constraint assign_shifts(JD,saturday,am,3,4);
+constraint assign_shifts(JD,saturday,pm,0,0);
+constraint assign_shifts(JD,saturday,am,0,0);
+constraint assign_shifts(JD,saturday,pm,0,0);
+
+%CK
+
+constraint global_cardinality_low_up(     ssu[CK,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[CK,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[CK,..],[1],[0],[6]);
+constraint no_split_weekend(CK);
+constraint assign_shifts(CK,friday,pm,0,0);
+constraint assign_shifts(CK,saturday,am,3,4);
+constraint assign_shifts(CK,saturday,pm,0,0);
+constraint assign_shifts(CK,saturday,am,0,0);
+constraint assign_shifts(CK,saturday,pm,0,0);
+
+%TB
+
+constraint global_cardinality_low_up(     ssu[TB,..],[1],[0],[7]);
+constraint global_cardinality_low_up(incharge[TB,..],[1],[0],[7]);
+constraint global_cardinality_low_up(  oncall[TB,..],[1],[0],[6]);
+constraint no_consecutive(TB);
+constraint assign_shifts(TB,friday,pm,0,0);
+constraint assign_shifts(TB,saturday,am,3,4);
+constraint assign_shifts(TB,saturday,pm,0,0);
+constraint assign_shifts(TB,saturday,am,0,0);
+constraint assign_shifts(TB,saturday,pm,0,0);
+
